@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:animate_do/animate_do.dart';
+import '../pages/pages.dart';
 
 
 class Pagina1Page extends StatelessWidget {
@@ -17,7 +18,12 @@ class Pagina1Page extends StatelessWidget {
           child: const Text('Animate_do')),
         actions: [
           IconButton(
-            onPressed: () {}, 
+            onPressed: () {
+              Navigator.push(context, MaterialPageRoute(
+                  builder: (BuildContext context) => const TwitterPage()
+                )
+              );
+            },
             icon: const FaIcon(FontAwesomeIcons.twitter)
           ),
           SlideInLeft(
@@ -37,7 +43,12 @@ class Pagina1Page extends StatelessWidget {
       floatingActionButton: ElasticInRight(
         child: FloatingActionButton(
           child: const FaIcon(FontAwesomeIcons.play),
-          onPressed: (){}
+          onPressed: (){
+            Navigator.push(context, MaterialPageRoute(
+                  builder: (BuildContext context) => const NavegacionPage()
+              )
+            );
+          }
         ),
       ),
       body: Center(
